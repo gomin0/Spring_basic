@@ -36,10 +36,23 @@ public class OrderServiceImpl implements OrderService {
         this.discountPolicy = discountPolicy;
     }*/
 
+    //@Autowired 필드 명 매칭
+    //@Autowired (생성자가 하나면 생략 가능)
+/*    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy rateDiscountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = rateDiscountPolicy;
+    }
+
+    //@Qualifier 사용
+    //@Autowired (생성자가 하나면 생략 가능)
+      public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }*/
+
     //일반 매서드 주입
 /*    @Autowired
-    public void init(MemberRepository memberRepository, DiscountPolicy
-            discountPolicy) {
+    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }*/
