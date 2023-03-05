@@ -2,10 +2,12 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor //final이 붙은거 생성자를 만들어줌
 public class OrderServiceImpl implements OrderService {
 
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy(); //정액 할인 정책
@@ -28,12 +30,12 @@ public class OrderServiceImpl implements OrderService {
         this.discountPolicy = discountPolicy;
     }*/
 
-    //생성자 주입
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    //생성자 주입 (@RequiredArgsConstructor로 자동 생성)
+    //@Autowired (생성자가 하나면 생략 가능)
+/*    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
-    }
+    }*/
 
     //일반 매서드 주입
 /*    @Autowired
