@@ -11,8 +11,8 @@ public class OrderServiceImpl implements OrderService {
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy(); //정액 할인 정책
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); //정률 할인 정책 -->DIP 위반
 
-    private MemberRepository memberRepository; //회원 찾기
-    private DiscountPolicy discountPolicy;
+    private final MemberRepository memberRepository; //회원 찾기
+    private final DiscountPolicy discountPolicy;
 
     //필드 주입
 /*    @Autowired private MemberRepository memberRepository; //회원 찾기
